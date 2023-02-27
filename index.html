@@ -6,33 +6,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zomato</title>
     <style>
-      /* Write all styles here  */
-      @media only screen and (max-width: 800px) {
-        /* Medium Screen  */
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .item {
+        margin: 0px 10px;
+        text-decoration-line: none;
+      }
+      .top{
+        width: 80%;
+        margin: 0 auto;
+      }
+      .order{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+      }
+      .order-item{
+        display: flex;
+        flex-flow: column;
+        max-width: calc(33% - 40px);
+      }
+      .order-item > img{
+       contain: cover;
       }
 
+      .mid{
+        width: 80%;
+        margin: 0 auto;
+      }
+      .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;  
+      }
+
+      .grid-item{
+        box-shadow: 0px 0px 1px 0px;
+      }
+      
+      @media only screen and (max-width: 800px) {
+        .menu {
+            display: none;
+          } 
+        .order{
+          flex-direction: column;
+        } 
+        .order-item{
+          max-width: 100%;
+        }  
+        .container{
+          grid-template-columns: 1fr 1fr;
+        } 
+      }
+  
       @media only screen and (max-width: 500px) {
-        /* Small Screen  */
+        .menu {
+          display: none;
+        }  
+        .order{
+          flex-direction: column;
+        }  
+        .order-item{
+          max-width: 100%;
+        }
+        .container{
+          grid-template-columns: 1fr;
+        }   
       }
     </style>
   </head>
   <body>
-    <div class="nav">
-      <!-- Create the Navbar Here  -->
+    <div class="nav" >
+     <div>
+      <h1 style="color: red;">Zomato</h1>
+     </div>
+     <div class="menu">
+      <a class="item" >MENU</a>
+      <a class="item" >STORIES</a>
+      <a class="item" >GIFTCARD</a>
+      <a class="item" >CONTACT</a>
+     </div>
+     <div><button style="background-color: red; color: white;">Download App</button></div>
     </div>
     <div class="top">
       <h1>Order</h1>
-      <div>
-        <!-- Use flex to achieve the layout  -->
-        <!-- Here we will have 3 child divs -->
+      <div class="order">
+        <div class="order-item">
+          <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around%7C402:360&crop=402:360;*,*"/>
+          <h3>Order online</h3>
+          <p>Stay home & order to your doorstep</p>
+        </div>
+        <div class="order-item">
+          <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around%7C402:360&crop=402:360;*,*"/>
+          <h3>Dining</h3>
+          <p>Stay home & order to your doorstep</p>
+        </div>
+        <div class="order-item">
+          <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around%7C402:360&crop=402:360;*,*"/>
+          <h3>Nightlife & Clubs</h3>
+          <p>Stay home & order to your doorstep</p>
+        </div>
       </div>
     </div>
     <div class="mid">
       <h1>Our products</h1>
-      <div>
-        <!-- Here will be 6 child divs -->
-        <!-- Use Grid to achieve the layout  -->
+      <div class="container">
+        <div class="grid-item">
+          <img src ="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png">
+          <h3>Listing</h3>
+          <button>Learn More</button>
+        </div>
+        <div class="grid-item">
+          <img src ="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png">
+          <h3>Listing</h3>
+          <button>Learn More</button>
+        </div>
+        <div class="grid-item">
+          <img src ="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png">
+          <h3>Listing</h3>
+          <button>Learn More</button>
+        </div>
+        <div class="grid-item">
+          <img src ="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png">
+          <h3>Listing</h3>
+          <button>Learn More</button>
+        </div>
+        <div class="grid-item">
+          <img src ="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png">
+          <h3>Listing</h3>
+          <button>Learn More</button>
+        </div>
+        <div class="grid-item">
+          <img src ="https://b.zmtcdn.com/merchant-onboarding/be4f70ca22a3b31a84b3cf8ed811f0281600769259.png">
+          <h3>Listing</h3>
+         <button>Learn More</button>
+        </div>
+        
       </div>
+      
     </div>
     <div class="bottom">
       <h1>How it works</h1>
